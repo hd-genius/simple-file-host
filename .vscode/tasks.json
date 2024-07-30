@@ -1,0 +1,18 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build image",
+            "type": "shell",
+            "group": "build",
+            "command": "docker build . -t simple-file-host"
+        },
+        {
+            "label": "Run container",
+            "type": "shell",
+            "command": "docker run -d -p 8080:8080 simple-file-host"
+        }
+    ]
+}
